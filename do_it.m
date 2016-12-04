@@ -8,3 +8,6 @@ daoshu=2/norm(r2)-dot(v2,v2)/mu;
 sigma1=sigma2/2;
 sigma3=sigma2/2;
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+for_it;
