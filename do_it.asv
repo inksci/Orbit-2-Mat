@@ -1,0 +1,6 @@
+sigma2=dot(r2,v2)/sqrt(mu);
+daoshu=2/norm(r2)-dot(v2,v2)/mu;
+
+sigma1=sigma2*u0*
+sigma3=
+x1=sigma2*daoshu*sqrt(mu)*(t1-t2)+(sigma1-sigma2);
