@@ -15,10 +15,12 @@ C3=-tou1/tou*(1+1/6*u2*(tou^2-tou1^2));
 
 
 
+rou(1)=-D(1,1)+1/C1*D(1,2)-C3/C1*D(1,3);
+rou(2)=C1*D(2,1)-D(2,2)+C3*D(2,3);
+rou(3)=-C1/C3*D(3,1)+1/C3*D(3,2)-D(3,3);
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-do_it;
-rou_old=rou+100;
-while abs( (rou(2)-rou_old(2)) )>=1
-    do_it;rou_old-rou, rou_old=rou;
+for i=1:3
+   r(:,i)=rou(i)*rou0(:,i)+R(:,i);
 end
+
+v2=( F01*r(:,3)-F03*r(:,1) )/( F01*G03-F03*G01 );
